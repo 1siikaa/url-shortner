@@ -10,10 +10,7 @@ router.post('/url/shorten',Controller.createUrl)
 
 router.get('/:urlCode',Controller.getUrl)
 
-//.............................Hit On Wrong Url.........................................//
-router.all("/*", function(req, res){
-    return res.status(404).send({status:false, message : "Provided route url is wrong"})
-})
+
 
 
 
