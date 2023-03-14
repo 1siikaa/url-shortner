@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 const mongoose = require('mongoose')
 const route = require('./src/routes/route')
 app.use(express.json())
