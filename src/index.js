@@ -3,6 +3,7 @@ const app = express()
 const mongoose = require('mongoose')
 const route = require('./routes/route')
 app.use(express.json())
+const cors = require('cors')
 app.use(cors())
 mongoose.connect('mongodb+srv://1siikaa07:1siikaa07@cluster0.8px4cpv.mongodb.net/url-shortener?retryWrites=true&w=majority',{
     useNewUrlParser: true
