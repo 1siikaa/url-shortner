@@ -5,7 +5,7 @@ const route = require('./src/routes/route')
 app.use(express.json())
 const cors = require('cors')
 app.use(cors({
-   origin:[ "http://localhost:3000" , "https://main--adorable-croissant-6c39f3.netlify.app"  ]
+   origin:[ "http://localhost:3000" , "https://main--adorable-croissant-6c39f3.netlify.app/"  ]
 }))
 mongoose.connect('mongodb+srv://1siikaa07:1siikaa07@cluster0.8px4cpv.mongodb.net/url-shortener?retryWrites=true&w=majority',{
     useNewUrlParser: true
