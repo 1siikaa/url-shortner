@@ -5,7 +5,7 @@ const route = require('./src/routes/route')
 app.use(express.json())
 const cors = require('cors')
 app.use(cors({
-   origin:[ "http://localhost:3000" , "https://main--adorable-croissant-6c39f3.netlify.app/"  ]
+   origin:[ "http://localhost:3000" , "http://main--adorable-croissant-6c39f3.netlify.app/"  ]
 }))
 
 mongoose.connect('mongodb+srv://1siikaa07:1siikaa07@cluster0.8px4cpv.mongodb.net/url-shortener?retryWrites=true&w=majority',{
@@ -16,7 +16,7 @@ mongoose.connect('mongodb+srv://1siikaa07:1siikaa07@cluster0.8px4cpv.mongodb.net
     .catch(err => console.log(err))
 
 app.use(function(req, res, next) {
- res.header('Access-Control-Allow-Origin', 'https://main--adorable-croissant-6c39f3.netlify.app/');
+ res.setHeader('Access-Control-Allow-Origin', 'http://main--adorable-croissant-6c39f3.netlify.app/');
  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS'); 
  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
  res.header('Access-Control-Allow-Credentials', 'true');
